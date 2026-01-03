@@ -9,7 +9,7 @@ define('SITE_DESCRIPTION', 'A minimal blog.');
 define('SITE_URL', 'https://sun.pjh.is');
 
 // Pagination
-define('POSTS_PER_PAGE', 6);
+define('POSTS_PER_PAGE', 20);
 
 // Colors
 define('TEXT_COLOR', '#232323');

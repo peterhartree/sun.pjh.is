@@ -26,7 +26,6 @@
         <nav class="nav">
             <a href="/">Home</a>
             <a href="/archives">Archive</a>
-            <a href="/about">About</a>
         </nav>
     </div>
     <main class="container">

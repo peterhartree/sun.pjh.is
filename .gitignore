@@ -1,6 +1,5 @@
-# Content (posts are site-specific, track them)
-# htdocs/data/posts/*
-# !htdocs/data/posts/.gitkeep
+# Obsidian vault (contains plugins with secrets)
+htdocs/data/posts/.obsidian/
 
 # macOS
 .DS_Store

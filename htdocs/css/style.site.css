@@ -1,4 +1,28 @@
 /**
  * sun.pjh.is - Site-specific Styles
- * Add custom styles here
  */
+
+/* Narrower content width */
+.container {
+    max-width: 690px;
+}
+
+.header {
+    max-width: 690px;
+}
+
+/* Slightly larger body text */
+html {
+    font-size: 17px;
+}
+
+#logo {
+    font-size: 16px;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-bottom: 1px solid #2c2c2c;
+    margin: 2rem 0;
+}
