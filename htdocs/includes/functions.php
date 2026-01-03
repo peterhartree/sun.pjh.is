@@ -350,6 +350,64 @@ function renderPostMeta($post) {
 }
 
 // =============================================================================
+// Embed converters
+// =============================================================================
+
+/**
+ * Convert YouTube URLs to embeds in HTML content
+ * Handles both raw URLs and URLs wrapped in anchor tags by Parsedown
+ */
+function convertYouTubeEmbeds($html) {
+    // Match youtu.be URLs wrapped in anchor tags within paragraphs
+    $html = preg_replace(
+        '/<p>\s*<a[^>]*href=["\']https?:\/\/youtu\.be\/([a-zA-Z0-9_-]+)["\'][^>]*>[^<]*<\/a>\s*<\/p>/i',
+        '<div class="video-embed"><iframe src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+        $html
+    );
+
+    // Match youtube.com/watch URLs wrapped in anchor tags within paragraphs
+    $html = preg_replace(
+        '/<p>\s*<a[^>]*href=["\']https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)[^"\']*["\'][^>]*>[^<]*<\/a>\s*<\/p>/i',
+        '<div class="video-embed"><iframe src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+        $html
+    );
+
+    // Match raw youtu.be URLs in paragraphs
+    $html = preg_replace(
+        '/<p>\s*https?:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\s*<\/p>/i',
+        '<div class="video-embed"><iframe src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+        $html
+    );
+
+    // Match raw youtube.com/watch URLs in paragraphs
+    $html = preg_replace(
+        '/<p>\s*https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)[^<]*<\/p>/i',
+        '<div class="video-embed"><iframe src="https://www.youtube.com/embed/$1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>',
+        $html
+    );
+
+    return $html;
+}
+
+/**
+ * Convert Twitter/X URLs to embed placeholders
+ * Handles: twitter.com, x.com status URLs
+ */
+function convertTwitterEmbeds($html) {
+    // Pattern to match Twitter/X URLs (both raw and anchor-wrapped)
+    // Matches: https://twitter.com/user/status/123 or https://x.com/user/status/123
+    $pattern = '/<p>\s*(?:<a[^>]*href=")?https?:\/\/(?:twitter\.com|x\.com)\/([a-zA-Z0-9_]+)\/status\/(\d+)[^"<]*(?:"[^>]*>[^<]*<\/a>)?\s*<\/p>/i';
+
+    $html = preg_replace_callback($pattern, function($matches) {
+        $username = $matches[1];
+        $tweetId = $matches[2];
+        return '<div class="tweet-embed" data-tweet-id="' . htmlspecialchars($tweetId) . '" data-username="' . htmlspecialchars($username) . '"><div class="tweet-loading">Loading tweet...</div></div>';
+    }, $html);
+
+    return $html;
+}
+
+// =============================================================================
 // Site-specific extensions
 // =============================================================================
 
@@ -359,8 +417,11 @@ if (file_exists(__DIR__ . '/functions.site.php')) {
 }
 
 // Default post HTML processor (can be overridden in functions.site.php)
+// Applies YouTube and Twitter embed conversion by default
 if (!function_exists('processPostHtml')) {
     function processPostHtml($html) {
+        $html = convertYouTubeEmbeds($html);
+        $html = convertTwitterEmbeds($html);
         return $html;
     }
 }

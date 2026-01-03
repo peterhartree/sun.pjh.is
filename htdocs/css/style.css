@@ -470,3 +470,196 @@ pre code {
 .post-nav a:hover {
     opacity: 0.6;
 }
+
+/* ==========================================================================
+   VIDEO EMBEDS
+   ========================================================================== */
+
+.video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 24px 0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+/* ==========================================================================
+   TWEET EMBEDS
+   ========================================================================== */
+
+.tweet-embed {
+    margin: 24px 0;
+}
+
+.tweet-loading {
+    padding: 1rem;
+    color: #888;
+    font-size: 0.875rem;
+}
+
+.tweet-card {
+    border: 1px solid rgba(44, 44, 44, 0.15);
+    border-radius: 12px;
+    padding: 1rem;
+    background: #fff;
+    max-width: 550px;
+}
+
+.tweet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.tweet-author {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.75rem;
+}
+
+.tweet-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tweet-avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e1e1e1;
+    flex-shrink: 0;
+}
+
+.tweet-author-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.tweet-author-name {
+    font-weight: 600;
+    color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.tweet-verified {
+    width: 16px;
+    height: 16px;
+    color: #1d9bf0;
+}
+
+.tweet-author-handle {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.tweet-logo {
+    color: #2c2c2c;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+
+.tweet-logo:hover {
+    opacity: 1;
+}
+
+.tweet-logo svg {
+    width: 20px;
+    height: 20px;
+}
+
+.tweet-body {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.tweet-body a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+.tweet-body a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.tweet-media {
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tweet-media img,
+.tweet-media video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8125rem;
+    color: #888;
+}
+
+.tweet-date {
+    color: #888;
+    text-decoration: none;
+}
+
+.tweet-date:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.tweet-stats {
+    display: flex;
+    gap: 1rem;
+}
+
+.tweet-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.tweet-stat svg {
+    width: 16px;
+    height: 16px;
+}
+
+.tweet-error {
+    color: #888;
+    font-size: 0.875rem;
+}
+
+.tweet-error p {
+    margin: 0 0 0.5rem;
+}
+
+.tweet-error a {
+    color: #1d9bf0;
+}
