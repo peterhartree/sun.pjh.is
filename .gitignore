@@ -1,11 +1,6 @@
-# Site-specific files (not part of template)
-htdocs/includes/config.php
-htdocs/includes/functions.site.php
-htdocs/css/style.site.css
-
-# Content
-htdocs/data/posts/*
-!htdocs/data/posts/.gitkeep
+# Content (posts are site-specific, track them)
+# htdocs/data/posts/*
+# !htdocs/data/posts/.gitkeep
 
 # macOS
 .DS_Store
