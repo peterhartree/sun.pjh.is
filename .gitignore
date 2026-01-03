@@ -1,11 +1,16 @@
 # Obsidian vault (contains plugins with secrets)
 htdocs/data/posts/.obsidian/
 
+# Local data (MTV-specific)
+downloaded_videos/
+downloaded_videos.json
+
 # macOS
 .DS_Store
 
 # IDE
 .idea/
 .vscode/
+.obsidian/
 *.swp
 *.swo

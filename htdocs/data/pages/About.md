@@ -1,3 +1,11 @@
 # About
 
-This is a placeholder about page. Edit `data/pages/About.md` to customise.
+This is a music blog.
+
+Live performances and other good stuff.
+
+Minimal commentary.
+
+Not as good as [WFLM](https://wefuckinglovemusic.blogspot.com/).
+
+Available in stereo.
