@@ -7,11 +7,16 @@ htdocs/css/style.site.css
 htdocs/data/posts/*
 !htdocs/data/posts/.gitkeep
 
+# Local data (MTV-specific)
+downloaded_videos/
+downloaded_videos.json
+
 # macOS
 .DS_Store
 
 # IDE
 .idea/
 .vscode/
+.obsidian/
 *.swp
 *.swo
