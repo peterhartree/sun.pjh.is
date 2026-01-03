@@ -1,0 +1,12 @@
+Date: 2021-11-01 2200
+Tags: quote, john dewey, metaethics, pragmatism
+
+# John Dewey on moral principles
+The diffused or wide applicability of habits is reflected in the general character of principles: a principle is intellectually what a habit is for direct action. As habits set in grooves dominate activity and swerve it from conditions instead of increasing its adaptability, so principles treated as fixed rules instead of as helpful methods take men away from experience. The more complicated the situation, and the less we really know about it, the more insistent is the orthodox type of moral theory upon the prior existence of some fixed and universal principle or law which is to be directly applied and followed. Ready-made rules available at a moment's notice for settling any kind of moral difficulty and resolving every species of moral doubt have been the chief object of the ambition of moralists. In the much less complicated and less changing matters of bodily health such pretensions are known as quackery. But in morals a hankering for certainty, born of timidity and nourished by love of authoritative prestige, has led to the idea that absence of immutably fixed and universally applicable ready-made principles is equivalent to moral chaos.
+
+[...]
+
+Morals must be a growing science if it is to be a science at all, not merely because all truth has not yet been appropriated by the mind of man, but because life is a moving affair in which old moral truth ceases to apply. Principles are methods of inquiry and forecast which require verification by the event; and the time honored effort to assimilate morals to mathematics is only a way of bolstering up an old dogmatic authority, or putting a new one upon the throne of the old. But the experimental character of moral judgments does not mean complete uncertainty and fluidity. Principles exist as hypotheses with which to experiment. Human history is long. There is a long record of past experimentation in conduct, and there are cumulative, verifications which give many principles a well earned prestige. Lightly to disregard them is the height of foolishness. But social situations alter; and it is also foolish not to observe how old principles actually work under new conditions, and not to modify them so that they will be more effectual instruments in judging new cases.
+
+_Human Nature and Conduct,_ Part 3: The Place of Intelligence - VII. The Nature of Principles
+<https://brocku.ca/MeadProject/Dewey/Dewey_1922/Dewey1922_21.html>

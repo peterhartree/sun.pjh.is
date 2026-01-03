@@ -1,0 +1,20 @@
+Date: 2023-09-19 0900
+Tags: Quote, joe carlsmith, metaethics, moral psychology
+
+# Joe Carlsmith against "non-naturalistic realism or bust"
+
+Are you so sure you even know what this debate is about – what it means for something to matter, or to be “natural,” or to be “mind-dependent”— let alone what the answer is? So sure that if it’s only raw nature – only joy, love, friendship, pain, grief, and so on, with — then there’s nothing to fight for, or against? I, for one, am not.
+
+So “you should have higher credence on naturalism-but-things-matter” is the immediate objection here. Indeed, I think this objection cautions wariness about the un-Bayesian-ness of much philosophical discourse. Some meta-ethicist might well declare confidently “if naturalism is true, then nothing matters!” But they are rarely thinking in terms of quantitative credences on “ok but actually maybe if naturalism is true some things matter after all,” or about the odds at which they’re willing to bet.
+
+[...]
+
+Remember, nihilism – the view that there are no normative facts – is distinct from what we might call “indifference-ism” – that is, the view that there are normative facts, and they actively say that you _should be_ indifferent to everything. On nihilism, indifference is no more normatively required, as a response to the possibility of innocent children being burned alive, than is intense concern (or embarrassment, or desire to do a prime number of jumping jacks). Conditional on nihilism, nothing is telling you not to care about yourself, or your family, or those children: you’re absolutely free to do so. And plausibly – at least, if your psychology is similar to many people who claim to accept something like nihilism – you still _will_ care.
+
+[...]
+
+My own sense is that most familiar, gloomy connotations of nihilism aren’t centrally about meta-ethics at all. Rather, they are associated more closely with a cluster of _psychological_ and _motivational_ issues related to depression, hopelessness, and loss of connection with a sense of care and purpose. Sometimes, these issues are bound up with someone’s views about the metaphysics of normative properties and the semantics of normative discourse (and sometimes, we grope for this sort of abstract language in order to frame some harder-to-articulate disorientation). But often, when such issues crop up, meta-ethics isn’t actually the core explanation. After all, the most meta-ethically inflationary realists, theists, and so on can see their worlds drain of color and their motivations go flat; and conversely, the most metaphysically reductionist subjectivists, anti-realists, nihilists and so on can fight just as hard as others to save their friends and families from a fire; to build flourishing lives and communities; to love their neighbors as themselves. Indeed, often (and even setting aside basic stuff about mental health, getting enough sleep/exercise, etc), stuff like despair, depression, and so on is often prompted most directly by the world not being a way _you want it to be_ — e.g., not finding the sort of love, joy, status, accomplishment and so forth that you’re looking for; feeling stuck and bored by your life; feeling overwhelmed by the suffering in the world and/or unable to make a difference; etc — rather than by actually not wanting anything, or by a concern that something you want deeply isn’t _worth_ wanting at the end of the day. Meta-ethics can matter in all this, yes, but we should be careful not to mistake psychological issues for philosophical ones – even when the lines get blurry.
+
+https://joecarlsmith.com/2022/10/09/against-the-normative-realists-wager
+
+See also: [Simon Blackburn on people who think that anti-realism entails nihilism](https://sun.pjh.is/simon-blackburn-on-people-who-think-that-anti-realism-entails-nihilism)

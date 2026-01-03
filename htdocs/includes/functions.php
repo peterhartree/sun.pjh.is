@@ -390,7 +390,7 @@ function convertYouTubeEmbeds($html) {
 }
 
 /**
- * Convert Twitter/X URLs to embed placeholders
+ * Convert Twitter/X URLs to official Twitter embeds
  * Handles: twitter.com, x.com status URLs
  */
 function convertTwitterEmbeds($html) {
@@ -401,7 +401,9 @@ function convertTwitterEmbeds($html) {
     $html = preg_replace_callback($pattern, function($matches) {
         $username = $matches[1];
         $tweetId = $matches[2];
-        return '<div class="tweet-embed" data-tweet-id="' . htmlspecialchars($tweetId) . '" data-username="' . htmlspecialchars($username) . '"><div class="tweet-loading">Loading tweet...</div></div>';
+        $tweetUrl = 'https://twitter.com/' . htmlspecialchars($username) . '/status/' . htmlspecialchars($tweetId);
+        // Use Twitter's official blockquote format that widgets.js will transform
+        return '<blockquote class="twitter-tweet" data-dnt="true"><a href="' . $tweetUrl . '"></a></blockquote>';
     }, $html);
 
     return $html;

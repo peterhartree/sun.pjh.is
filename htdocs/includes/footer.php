@@ -3,6 +3,6 @@
     <?php if (isset($includeSearch) && $includeSearch): ?>
     <script src="/js/search.js"></script>
     <?php endif; ?>
-    <script src="/js/tweet-embed.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

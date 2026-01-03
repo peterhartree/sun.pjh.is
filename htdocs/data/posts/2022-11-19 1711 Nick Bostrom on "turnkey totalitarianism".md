@@ -1,0 +1,10 @@
+Date: 2022-11-19 1711
+Tags: Quote, nick bostrom, futurism, vulnerable world hypothesis
+
+# Nick Bostrom on "turnkey totalitarianism"
+
+Developing a system for turnkey totalitarianism means incurring a risk, even if one does not intend for the key to be turned.
+
+One could try to reduce this risk by designing the system with appropriate technical and institutional safeguards. For example, one could aim for a system of ‘structured transparency’ that prevents concentrations of power by organizing the information architecture so that multiple independent stakeholders must give their permission in order for the system to operate, and so that only the speciﬁc information that is legitimately needed by some decision-maker is made available to her, with suitable redactions and anonymization applied as the purpose permits. With some creative mechanism design, some machine learning, and some fancy cryptographic footwork, there might be no fundamental barrier to achieving a surveillance system that is at once highly effective at its ofﬁcial function yet also somewhat resistant to being subverted to alternative uses.
+
+How likely this is to be achieved in practice is of course another matter, which would require further exploration. Even if a signiﬁcant risk of totalitarianism would inevitably accompany a well-intentioned surveillance project, it would not follow that pursuing such a project would increase the risk of totalitarianism. A relatively less risky well-intentioned project, commenced at a time of comparative calm, might reduce the risk of totalitarianism by preempting a less-wellintentioned and more risky project started during a crisis. But even if there were some net totalitarianism-risk-increasing effect, it might be worth accepting that risk in order to gain the general ability to stabilize civilization against emerging Type-1 threats (or for the sake of other beneﬁts that extremely effective surveillance and preventive policing could bring).
