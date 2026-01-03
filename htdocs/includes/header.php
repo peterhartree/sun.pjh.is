@@ -15,9 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=<?= filemtime(__DIR__ . '/../css/style.css') ?>">
     <?php if (file_exists(__DIR__ . '/../css/style.site.css')): ?>
-    <link rel="stylesheet" href="/css/style.site.css">
+    <link rel="stylesheet" href="/css/style.site.css?v=<?= filemtime(__DIR__ . '/../css/style.site.css') ?>">
     <?php endif; ?>
 </head>
 <body<?= isset($bodyClass) ? ' class="' . e($bodyClass) . '"' : '' ?>>
