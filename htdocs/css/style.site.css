@@ -65,6 +65,17 @@ blockquote li:not(:last-child) {
     margin-bottom: 12px;
 }
 
+@media screen and (max-width: 730px) {
+    blockquote ul {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+
+    blockquote li {
+        margin-left: 0;
+    }
+}
+
 .hidden {
     display: none;
 }
