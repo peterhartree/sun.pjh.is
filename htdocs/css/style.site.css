@@ -54,3 +54,17 @@ blockquote {
     font-style: normal;
     opacity: 1;
 }
+
+blockquote ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 1.25rem;
+}
+
+blockquote li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.hidden {
+    display: none;
+}
