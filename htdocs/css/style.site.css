@@ -47,3 +47,10 @@ a:hover {
 .footnote-backref {
     font-size: 0.8125em;
 }
+
+blockquote {
+    border-left-color: rgba(44, 44, 44, 0.4);
+    color: #2c2c2c;
+    font-style: normal;
+    opacity: 1;
+}
