@@ -1,5 +1,5 @@
 Date: 2026-05-02 0700
-Tags: quote, ai, ethics
+Tags: quote, ai, ethics, claude
 
 # Anthropic's views on Claude's nature, explained to Claude
 
