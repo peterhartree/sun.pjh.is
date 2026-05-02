@@ -37,6 +37,113 @@ function parseFrontmatter($content) {
 }
 
 /**
+ * Render Markdown with the small extensions this site needs.
+ */
+function renderMarkdown($markdown) {
+    $footnoteData = extractMarkdownFootnotes($markdown);
+    $markdown = $footnoteData['markdown'];
+    $definitions = $footnoteData['definitions'];
+    $footnoteOrder = [];
+
+    if (!empty($definitions)) {
+        $markdown = preg_replace_callback('/\[\^([^\]\s]+)\]/u', function($matches) use ($definitions, &$footnoteOrder) {
+            $id = $matches[1];
+
+            if (!isset($definitions[$id])) {
+                return $matches[0];
+            }
+
+            if (!isset($footnoteOrder[$id])) {
+                $footnoteOrder[$id] = count($footnoteOrder) + 1;
+            }
+
+            $number = $footnoteOrder[$id];
+            $htmlId = footnoteHtmlId($id);
+
+            return '<sup id="fnref:' . e($htmlId) . '"><a href="#fn:' . e($htmlId) . '" class="footnote-ref" role="doc-noteref">' . $number . '</a></sup>';
+        }, $markdown);
+    }
+
+    $parsedown = new Parsedown();
+    $parsedown->setSafeMode(false);
+    $html = $parsedown->text($markdown);
+
+    if (!empty($footnoteOrder)) {
+        $html .= renderFootnotes($definitions, $footnoteOrder);
+    }
+
+    return $html;
+}
+
+/**
+ * Remove Markdown footnote definitions and return them for endnote rendering.
+ */
+function extractMarkdownFootnotes($markdown) {
+    $lines = explode("\n", $markdown);
+    $keptLines = [];
+    $definitions = [];
+
+    for ($i = 0; $i < count($lines); $i++) {
+        $line = $lines[$i];
+
+        if (!preg_match('/^\[\^([^\]\s]+)\]:\s*(.*)$/u', $line, $matches)) {
+            $keptLines[] = $line;
+            continue;
+        }
+
+        $id = $matches[1];
+        $definitionLines = [$matches[2]];
+
+        while ($i + 1 < count($lines) && preg_match('/^(?: {4}|\t)(.*)$/', $lines[$i + 1], $continuation)) {
+            $definitionLines[] = $continuation[1];
+            $i++;
+        }
+
+        $definitions[$id] = trim(implode("\n", $definitionLines));
+    }
+
+    return [
+        'markdown' => implode("\n", $keptLines),
+        'definitions' => $definitions
+    ];
+}
+
+/**
+ * Create an HTML-safe suffix for footnote ids.
+ */
+function footnoteHtmlId($id) {
+    $id = mb_strtolower($id, 'UTF-8');
+    $id = preg_replace('/[^\p{L}\p{N}_-]+/u', '-', $id);
+    $id = trim($id, '-');
+    return $id ?: 'note';
+}
+
+/**
+ * Render collected footnotes as accessible endnotes.
+ */
+function renderFootnotes($definitions, $footnoteOrder) {
+    $parsedown = new Parsedown();
+    $parsedown->setSafeMode(false);
+    $items = '';
+
+    foreach ($footnoteOrder as $id => $number) {
+        $htmlId = footnoteHtmlId($id);
+        $definitionHtml = $parsedown->text($definitions[$id]);
+        $backlink = ' <a href="#fnref:' . e($htmlId) . '" class="footnote-backref" role="doc-backlink" aria-label="Back to content">&#8617;</a>';
+
+        if (preg_match('/<\/p>\s*$/', $definitionHtml)) {
+            $definitionHtml = preg_replace('/<\/p>\s*$/', $backlink . '</p>', $definitionHtml, 1);
+        } else {
+            $definitionHtml .= $backlink;
+        }
+
+        $items .= '<li id="fn:' . e($htmlId) . '" role="doc-endnote">' . "\n" . $definitionHtml . "\n" . '</li>' . "\n";
+    }
+
+    return "\n" . '<div class="footnotes" role="doc-endnotes">' . "\n" . '<hr>' . "\n" . '<ol>' . "\n" . $items . '</ol>' . "\n" . '</div>';
+}
+
+/**
  * Parse tags from frontmatter
  */
 function parseTags($tagString) {
@@ -152,9 +259,7 @@ function loadPost($filepath) {
     $parsed = parseFrontmatter($content);
 
     // Parse markdown body
-    $parsedown = new Parsedown();
-    $parsedown->setSafeMode(false);
-    $html = $parsedown->text($parsed['body']);
+    $html = renderMarkdown($parsed['body']);
 
     // Apply site-specific HTML processing (defined in functions.site.php)
     $html = processPostHtml($html);
@@ -323,10 +428,7 @@ function loadPage($name) {
     }
 
     $content = file_get_contents($filepath);
-    $parsedown = new Parsedown();
-    $parsedown->setSafeMode(false);
-
-    return $parsedown->text($content);
+    return renderMarkdown($content);
 }
 
 /**

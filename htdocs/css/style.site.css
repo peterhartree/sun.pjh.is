@@ -22,3 +22,28 @@ hr {
     border-bottom: 1px solid #2c2c2c;
     margin: 2rem 0;
 }
+
+/* Remove underline/border treatment from link hover states */
+a:hover {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.footnotes {
+    color: #999;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+.footnotes ol {
+    padding-left: 1.25rem;
+}
+
+.footnotes li {
+    margin-bottom: 0.5rem;
+}
+
+.footnote-ref,
+.footnote-backref {
+    font-size: 0.8125em;
+}
