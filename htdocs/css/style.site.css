@@ -66,6 +66,10 @@ blockquote li:not(:last-child) {
 }
 
 @media screen and (max-width: 730px) {
+    blockquote {
+        padding-left: 1em;
+    }
+
     blockquote ul {
         margin-left: 0;
         padding-left: 1rem;
