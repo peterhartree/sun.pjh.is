@@ -5,7 +5,7 @@
 
 // Site identity
 define('SITE_TITLE', 'sun.pjh.is');
-define('SITE_DESCRIPTION', 'A minimal blog.');
+define('SITE_DESCRIPTION', 'Sunglasses Ideally');
 define('SITE_URL', 'https://sun.pjh.is');
 
 // Pagination

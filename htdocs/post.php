@@ -23,7 +23,7 @@ $prevPost = $result['prev'];
 $nextPost = $result['next'];
 
 $pageTitle = $post['title'];
-$pageDescription = strip_tags($post['title']) . ' - ' . SITE_DESCRIPTION;
+$pageDescription = SITE_DESCRIPTION;
 $bodyClass = 'post-page';
 
 include __DIR__ . '/includes/header.php';
