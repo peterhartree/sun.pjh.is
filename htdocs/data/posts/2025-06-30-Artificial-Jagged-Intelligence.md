@@ -16,4 +16,4 @@ Karpathy adds (and I agree):
 > 
 > For now, this is something to be aware of, especially in production settings. Use LLMs for the tasks they are good at but be on a lookout for jagged edges, and keep a human in the loop.
 
-The phrase has recently been used by Satya Nadella and Sundar Pichai.
+Satya Nadella and Sundar Pichai are also using the phrase.
