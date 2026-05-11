@@ -3,6 +3,7 @@ Tags: Quote, futurism, evolution, ai, vitalik buterin
 
 # Vitalik Buterin on superintelligence: merge or die
 
+<blockquote>
 Across the board, I see far too many plans to save the world that involve giving a small group of people extreme and opaque power and hoping that they use it wisely. And so I find myself drawn to a different philosophy, one that has detailed ideas for how to deal with risks, but which seeks to create and maintain a more democratic world and tries to avoid centralization as the go-to solution to our problems.
 
 [...]
@@ -19,5 +20,6 @@ Later stages of such a roadmap admittedly get weird. In addition to brain-comput
 
 ![least implausible option](https://vitalik.eth.limo/images/techno_optimism/mindpaths.png)
 
+</blockquote>
 
 https://vitalik.eth.limo/general/2023/11/27/techno_optimism.html

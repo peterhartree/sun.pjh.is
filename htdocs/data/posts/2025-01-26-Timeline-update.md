@@ -3,5 +3,4 @@ Tags: quote
 
 # Timeline update
 
-![](https://pbs.twimg.com/media/GiPNxebWUAA78F5?format=jpg&name=medium)
-
+> ![](https://pbs.twimg.com/media/GiPNxebWUAA78F5?format=jpg&name=medium)

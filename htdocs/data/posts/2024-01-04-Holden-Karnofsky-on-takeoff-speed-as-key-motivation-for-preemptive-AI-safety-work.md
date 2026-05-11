@@ -3,6 +3,7 @@ Tags: Quote, ai, holden karnofsky
 
 # Holden Karnofsky: the fast takeoff scenario is a key motivation for preemptive AI safety measures
 
+<blockquote>
 Holden Karnofsky: One of the reasons I’m so interested in AI safety standards is because kind of no matter what risk you’re worried about, I think you hopefully should be able to get on board with the idea that you should measure the risk, and not unwittingly deploy AI systems that are carrying a tonne of the risk, before you’ve at least made a deliberate informed decision to do so. And I think if we do that, we can anticipate a lot of different risks and stop them from coming at us too fast. “Too fast” is the central theme for me.
 
 You know, a common story in some corners of this discourse is this idea of an AI that’s this kind of simple computer program, and it rewrites its own source code, and that’s where all the action is. I don’t think that’s exactly the picture I have in mind, although there’s some similarities.
@@ -18,6 +19,7 @@ I am in fact very sympathetic to people who would rather just adapt to things as
 Rob Wiblin: Yeah. I guess if you have this explosive growth, then the very strange things that we might be trying to prepare for might be happening in 2027, or incredibly soon.
 
 Holden Karnofsky: Something like that, yeah. It’s imaginable, right? And it’s all extremely uncertain because we don’t know. In my head, a lot of it is like there’s a set of properties that an AI system could have: roughly being able to do roughly everything humans are able to do to advance science and technology, or at least able to advance AI research. We don’t know when we’ll have that. One possibility is we’re like 30 years away from that. But once we get near that, things will move incredibly fast. And that’s a world we could be in. We could also be in a world where we’re only a few years from that, and then everything’s going to get much crazier than anyone thinks, much faster than anyone thinks.
+</blockquote>
 
 https://80000hours.org/podcast/episodes/holden-karnofsky-how-ai-could-take-over-the-world/
 

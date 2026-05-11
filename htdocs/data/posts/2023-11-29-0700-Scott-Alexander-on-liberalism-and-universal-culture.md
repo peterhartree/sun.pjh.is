@@ -3,7 +3,8 @@ Tags: Quote, evolution, pragmatism, liberalism, scott alexander
 
 # Scott Alexander on liberalism and universal culture
 
-## On liberalism
+<blockquote>
+<h2>On liberalism</h2>
 
 Liberalism is a technology for preventing civil war. It was forged in the fires of Hell – the horrors of the endless seventeenth century religious wars. For a hundred years, Europe tore itself apart in some of the most brutal ways imaginable – until finally, from the burning wreckage, we drew forth this amazing piece of alien machinery. A machine that, when tuned just right, let people live together peacefully without doing the “kill people for being Protestant” thing. Popular historical strategies for dealing with differences have included: brutally enforced conformity, brutally efficient genocide, and making sure to keep the alien machine tuned really really carefully.
 
@@ -35,5 +36,6 @@ Let me say again that this universal culture, though it started in the West, was
 Universal culture is the collection of the most competitive ideas and products. Coca-Cola spreads because it tastes better than whatever people were drinking before. Egalitarian gender norms spread because they’re more popular and likeable than their predecessors. If there was something that outcompeted Coca-Cola, then that would be the official soda of universal culture and Coca-Cola would be consigned to the scrapheap of history. 
 
 The only reason universal culture doesn’t outcompete everything else instantly and achieve fixation around the globe is barriers to communication. Some of those barriers are natural – Tibet survived universalization for a long time because nobody could get to it. Sometimes the barrier is time – universal culture can’t assimilate every little hill and valley instantly. Other times there are no natural barriers, and then **your choice is to either accept assimilation into universal culture, or put up some form of censorship**.
+</blockquote>
 
 https://slatestarcodex.com/2016/07/25/how-the-west-was-won/

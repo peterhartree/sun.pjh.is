@@ -3,6 +3,7 @@ Tags: quote, social epistemology, daniel ellsberg, henry kissenger
 
 # Ellsberg to Kissenger, on security clearance
 
+<blockquote>
 “Henry, there’s something I would like to tell you, for what it’s worth, something I wish I had been told years ago. You’ve been a consultant for a long time, and you’ve dealt a great deal with top secret information. But you’re about to receive a whole slew of special clearances, maybe fifteen or twenty of them, that are higher than top secret.
 
 “I’ve had a number of these myself, and I’ve known other people who have just acquired them, and I have a pretty good sense of what the effects of receiving these clearances are on a person who didn’t previously know they even _existed_. And the effects of reading the information that they will make available to you.
@@ -18,3 +19,5 @@ Tags: quote, social epistemology, daniel ellsberg, henry kissenger
 “You will deal with a person who doesn’t have those clearances only from the point of view of what you want him to believe and what impression you want him to go away with, since you’ll have to lie carefully to him about what you know. In effect, you will have to manipulate him. You’ll give up trying to assess what he has to say. The danger is, you’ll become something like a moron. You’ll become incapable of learning from most people in the world, no matter how much experience they may have in their particular areas that may be much greater than yours.”
 
 ….Kissinger hadn’t interrupted this long warning. As I’ve said, he could be a good listener, and he listened soberly. He seemed to understand that it was heartfelt, and he didn’t take it as patronizing, as I’d feared. But I knew it was too soon for him to appreciate fully what I was saying. He didn’t have the clearances yet.
+
+</blockquote>
