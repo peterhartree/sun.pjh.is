@@ -12,7 +12,8 @@ MTV.PJH.IS is a minimal PHP music blog for live performances. Static Markdown co
 # Local development server
 php -S localhost:8888 router.php
 
-# Deploy via git-ftp (configured in .git/config)
+# Production deploy (configured in .git/config)
+# Do not use git push as the deploy step; pushing to GitHub does not deploy this site.
 git ftp push
 ```
 
@@ -50,4 +51,5 @@ Content with https://youtu.be/ID auto-embedded
 - Use `e($string)` helper for HTML escaping all output
 - URL slugs are Unicode-safe via `mb_strtolower()` and regex normalization
 - Post filenames: `YYYY-MM-DD-slug-title.md`
+- Before committing, deploying, or publishing a post, rename its Markdown file so the filename is deploy-safe: replace spaces with hyphens.
 - Parsedown runs in unsafe mode (content is trusted)
