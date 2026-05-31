@@ -1,0 +1,55 @@
+#!/bin/sh
+set -eu
+
+cd "$(dirname "$0")"
+
+url="http://localhost:8888"
+
+open_browser=
+
+case "${1:-}" in
+  -s|--start)
+    open_browser=n
+    ;;
+  -h|--help)
+    echo "Usage: sh dev [-s|--start]"
+    echo
+    echo "Starts the local dev server."
+    echo "Without -s/--start, prompts before opening a browser window."
+    exit 0
+    ;;
+  "")
+    printf "Open browser at %s? [Y/n] " "$url"
+    read -r open_browser || open_browser=
+    ;;
+  *)
+    echo "Usage: sh dev [-s|--start]" >&2
+    exit 2
+    ;;
+esac
+
+if ! command -v php >/dev/null 2>&1; then
+  echo "Error: php is not installed or not on PATH." >&2
+  exit 1
+fi
+
+cleanup() {
+  if [ -n "${server_pid:-}" ] && kill -0 "$server_pid" 2>/dev/null; then
+    kill "$server_pid" 2>/dev/null || true
+  fi
+}
+
+trap cleanup INT TERM EXIT
+
+echo "Starting local dev server at $url"
+php -S localhost:8888 -t htdocs htdocs/router.php &
+server_pid=$!
+
+if [ "$open_browser" != "n" ] && [ "$open_browser" != "N" ]; then
+  sleep 1
+  if kill -0 "$server_pid" 2>/dev/null; then
+    open "$url"
+  fi
+fi
+
+wait "$server_pid"
