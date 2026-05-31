@@ -7,6 +7,20 @@ url="http://localhost:8888"
 
 open_browser=
 
+prompt_open_browser() {
+  printf "Open browser at %s? [Y/n] " "$url"
+
+  if [ -t 0 ]; then
+    saved_tty=$(stty -g)
+    stty cbreak -echo
+    open_browser=$(dd bs=1 count=1 2>/dev/null || true)
+    stty "$saved_tty"
+    printf "\n"
+  else
+    read -r open_browser || open_browser=
+  fi
+}
+
 case "${1:-}" in
   -s|--start)
     open_browser=n
@@ -19,8 +33,7 @@ case "${1:-}" in
     exit 0
     ;;
   "")
-    printf "Open browser at %s? [Y/n] " "$url"
-    read -r open_browser || open_browser=
+    prompt_open_browser
     ;;
   *)
     echo "Usage: sh dev [-s|--start]" >&2
