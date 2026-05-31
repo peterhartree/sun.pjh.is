@@ -33,23 +33,13 @@ if ! command -v php >/dev/null 2>&1; then
   exit 1
 fi
 
-cleanup() {
-  if [ -n "${server_pid:-}" ] && kill -0 "$server_pid" 2>/dev/null; then
-    kill "$server_pid" 2>/dev/null || true
-  fi
-}
-
-trap cleanup INT TERM EXIT
-
 echo "Starting local dev server at $url"
-php -S localhost:8888 -t htdocs htdocs/router.php &
-server_pid=$!
 
 if [ "$open_browser" != "n" ] && [ "$open_browser" != "N" ]; then
-  sleep 1
-  if kill -0 "$server_pid" 2>/dev/null; then
+  (
+    sleep 1
     open "$url"
-  fi
+  ) &
 fi
 
-wait "$server_pid"
+exec php -S localhost:8888 -t htdocs htdocs/router.php
