@@ -76,6 +76,27 @@ function renderMarkdown($markdown) {
 }
 
 /**
+ * Render Markdown inside raw HTML blockquote tags.
+ */
+function renderMarkdownInBlockquotes($html) {
+    return preg_replace_callback('/<blockquote\b([^>]*)>(.*?)<\/blockquote>/is', function($matches) {
+        $attributes = $matches[1];
+
+        if (preg_match('/\bdata-markdown\s*=\s*(?:"false"|\'false\'|false)(?=\s|$)/i', $attributes)) {
+            return $matches[0];
+        }
+
+        $innerHtml = trim($matches[2]);
+
+        if ($innerHtml === '') {
+            return $matches[0];
+        }
+
+        return '<blockquote' . $attributes . '>' . "\n" . renderMarkdown($innerHtml) . "\n" . '</blockquote>';
+    }, $html);
+}
+
+/**
  * Remove Markdown footnote definitions and return them for endnote rendering.
  */
 function extractMarkdownFootnotes($markdown) {
@@ -524,6 +545,7 @@ if (file_exists(__DIR__ . '/functions.site.php')) {
 // Applies YouTube and Twitter embed conversion by default
 if (!function_exists('processPostHtml')) {
     function processPostHtml($html) {
+        $html = renderMarkdownInBlockquotes($html);
         $html = convertYouTubeEmbeds($html);
         $html = convertTwitterEmbeds($html);
         return $html;
